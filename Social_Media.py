@@ -12,7 +12,7 @@ class brk:
         self.loggedin = 'False'
         ##self.menu() #to run this below as well, as soon as we create object
     
-    @staticmethod
+    @staticmethod  #static method decorator
     def get_id():
         return brk.__obj_cnt
     
