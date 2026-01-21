@@ -1,12 +1,31 @@
 
 class brk:
+    __obj_cnt = 0 ## static attribute not going to change 
+                  ## even if we create multiple object unless we are not changing it manually
     def __init__(self): # csontructor will get called as soon as we create the object
+        self.cnt = brk.__obj_cnt
+        brk.__obj_cnt += 1 
         self.user_name = '' 
+        self.__name = 'Ram'
         self.password = ''
         self.email = ''
         self.loggedin = 'False'
-        self.menu() #to run this below as well, as soon as we create object
+        ##self.menu() #to run this below as well, as soon as we create object
+    
+    @staticmethod
+    def get_id():
+        return brk.__obj_cnt
+    
+    @staticmethod
+    def set_id():
+        id = brk.__obj_cnt
+        brk.__obj_cnt += 1
 
+    def get_age(self):
+        return self.__name
+    
+    def set_age(self,x):
+        self.__name = x
 
     def menu(self):
         user_input = input("""Welcome to brk !! 
