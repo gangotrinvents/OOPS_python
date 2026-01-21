@@ -27,9 +27,9 @@ class brk:
             exit()
 
     def signup(self):
-        mail = input("Please enter your email:")
-        us_nm = input("Create user name")
-        pswd = input("Create your password")
+        mail = input("Please enter your email: ")
+        us_nm = input("Create user name: ")
+        pswd = input("Create your password: ")
 
         self.user_name = us_nm
         self.email = mail
@@ -43,10 +43,10 @@ class brk:
     def signin(self):
         #first check is username and password not define then sign in
         if self.user_name == '' and self.password == '':
-            print("Please sign up first from Main Menu")
+            print("Please sign up first from Main Menu..")
         else:
-            us_nm = input("Enter your user name")
-            pswd = input("Enter your password")
+            us_nm = input("Enter your user name: ")
+            pswd = input("Enter your password: ")
 
             if self.user_name == us_nm and self.password == pswd:
                 print("You have successfully signed in the brk !!!")
