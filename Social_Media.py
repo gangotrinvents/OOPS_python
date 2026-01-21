@@ -16,13 +16,13 @@ class brk:
                             4. PRESS 4 TO VISIT SETTING
                             5. PRESS ANYOTHER KEY TO EXIT""")
         if user_input == "1":
-            self.signup()
+            self.signup() ## while calling we dont put self, as now it will get treated as variable
         elif user_input == "2":
             self.signin()
         elif user_input == "3":
-            pass
+            self.profile()
         elif user_input == "4":
-            pass
+            self.setting()
         else:
             exit()
 
@@ -54,6 +54,28 @@ class brk:
             else:
                 print("Please re-enter your correct credentials..")
         print("\n")
+
         self.menu()
 
+    def profile(self):
+        if self.loggedin == True:
+            print(f"User name: {self.user_name}")
+            print("""About
+                  You visited the collest profile
+                  will you go on ride with me
+                  birthday basher""")
+            print("Connect   Block")
+        else:
+            print("Please sign in first")
+        print("\n")
+
+        self.menu()
+    def setting(self):
+        if self.loggedin == True:
+            print("General Setting \nAccount Details \nPrivacy \nTerms & Condition \n")
+        else:
+            print("Please sign in first")
+        print("\n")
+
+        self.menu()
 brk = brk()
